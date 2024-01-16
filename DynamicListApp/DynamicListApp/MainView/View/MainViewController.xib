@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="DynamicListApp" customModuleProvider="target">
             <connections>
-                <outlet property="labelTesting" destination="SQt-1M-Key" id="VVN-rB-QrU"/>
+                <outlet property="tableView" destination="yhN-Y1-gxN" id="hbK-WD-dBP"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,20 +19,39 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Main View" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SQt-1M-Key">
-                    <rect key="frame" x="8" y="415.66666666666669" width="377" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="0.054901960780000002" green="0.36862745099999999" blue="0.68627450980000004" alpha="0.35800393209999998" colorSpace="custom" customColorSpace="sRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="73a-hD-tNl">
+                    <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                    <items>
+                        <navigationItem title="Dynamic List App" id="KNF-lJ-h5z">
+                            <barButtonItem key="rightBarButtonItem" id="RNa-B7-vAg">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="LfR-4i-Tm3">
+                                    <rect key="frame" x="290" y="5" width="87" height="34.333333333333336"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="filled" title="+"/>
+                                    <connections>
+                                        <action selector="addButtonTapped:" destination="-1" eventType="touchUpInside" id="3jP-m6-IzS"/>
+                                    </connections>
+                                </button>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="yhN-Y1-gxN">
+                    <rect key="frame" x="8" y="111" width="377" height="699"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="SQt-1M-Key" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="3T5-kr-peJ"/>
-                <constraint firstItem="SQt-1M-Key" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="4GW-L3-gj9"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="SQt-1M-Key" secondAttribute="trailing" constant="8" id="5SD-aU-sWi"/>
-                <constraint firstItem="SQt-1M-Key" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="gOU-Is-l4O"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="yhN-Y1-gxN" secondAttribute="bottom" constant="8" id="Bsi-87-CLj"/>
+                <constraint firstItem="73a-hD-tNl" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="FeB-bG-186"/>
+                <constraint firstItem="73a-hD-tNl" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Fp4-ul-SHz"/>
+                <constraint firstItem="yhN-Y1-gxN" firstAttribute="top" secondItem="73a-hD-tNl" secondAttribute="bottom" constant="8" id="ju0-In-nh5"/>
+                <constraint firstItem="yhN-Y1-gxN" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="li6-Wp-ed3"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="yhN-Y1-gxN" secondAttribute="trailing" constant="8" id="mHR-S8-8wp"/>
+                <constraint firstItem="73a-hD-tNl" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="uBm-JC-eY0"/>
             </constraints>
             <point key="canvasLocation" x="138.1679389312977" y="20.422535211267608"/>
         </view>
