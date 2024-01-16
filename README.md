@@ -10,9 +10,9 @@ Este proyecto es una aplicación de ejemplo en Swift utilizando Xcode y UIKit. L
 
 ## Capturas de Pantalla
 
-![Captura de Pantalla 1](screenshots/screenshot1.png)
-![Captura de Pantalla 2](screenshots/screenshot2.png)
-![Captura de Pantalla 3](screenshots/screenshot3.png)
+![Captura de Pantalla 1](screenshots/screenshot1.png | width=150)
+![Captura de Pantalla 2](screenshots/screenshot2.png | width=150)
+![Captura de Pantalla 3](screenshots/screenshot3.png | width=150)
 
 ## Configuración del Proyecto
 
