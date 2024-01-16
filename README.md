@@ -10,9 +10,11 @@ Este proyecto es una aplicación de ejemplo en Swift utilizando Xcode y UIKit. L
 
 ## Capturas de Pantalla
 
-<img src="screenshots/screenshot1.png" width="150">
-<img src="screenshots/screenshot2.png" width="150">
-<img src="screenshots/screenshot3.png" width="150">
+<div style="display: flex; justify-content: space-between;">
+<img src="screenshots/screenshot1.png" width="150"style="margin-right: 10px;">
+<img src="screenshots/screenshot2.png" width="150"style="margin-right: 10px;">
+<img src="screenshots/screenshot3.png" width="150"style="margin-right: 10px;">
+</div>
 
 ## Configuración del Proyecto
 
