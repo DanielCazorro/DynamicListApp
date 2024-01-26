@@ -24,10 +24,10 @@
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="11V-5h-rDV" secondAttribute="bottom" constant="8" id="0l5-mD-tvw"/>
                     <constraint firstItem="11V-5h-rDV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="3pn-aY-rxp"/>
+                    <constraint firstItem="11V-5h-rDV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="6bc-DI-Rla"/>
                     <constraint firstAttribute="trailing" secondItem="11V-5h-rDV" secondAttribute="trailing" constant="8" id="88g-hF-e93"/>
-                    <constraint firstItem="11V-5h-rDV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="SKU-zW-T1L"/>
+                    <constraint firstAttribute="bottom" secondItem="11V-5h-rDV" secondAttribute="bottom" constant="8" id="ovc-Al-ZG2"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

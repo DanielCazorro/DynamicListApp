@@ -7,18 +7,18 @@
 
 import UIKit
 
-class MainViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class MainViewController: UIViewController {
     
     // MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!
     
     // MARK: - Properties
-    private var numbers = [Int] ()
+    private var viewModel = MainViewModel()
     
     // MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Asigna el delegado y el fuente de datos de la tabla
         tableView.dataSource = self
         tableView.delegate = self
@@ -27,37 +27,42 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         tableView.register(UINib(nibName: "MyCustomTableViewCell", bundle: nil), forCellReuseIdentifier: "mycustomcell")
         
     }
+}
+// MARK: - Extensions -
 
-    // MARK: - UITableViewDataSource
+// UITableViewDataSource
+extension MainViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // Retorna la cantidad de elementos en el array como el número de filas
-        return numbers.count
+        return viewModel.numberOfRows()
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // Configura y retorna la celda personalizada
         let cell = tableView.dequeueReusableCell(withIdentifier: "mycustomcell", for: indexPath) as! MyCustomTableViewCell
-        cell.numberLabel.text = "\(numbers[indexPath.row])"
+        cell.numberLabel.text = "\(viewModel.number(at: indexPath.row))"
         
         return cell
     }
+}
+
+// MARK: - UITableViewDelegate
+
+extension MainViewController: UITableViewDelegate {
     
-    
-    // MARK: - UITableViewDelegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // Multiplica el número seleccionado por 2 y actualiza la tabla
-        let selectedNumber = numbers[indexPath.row]
-        numbers[indexPath.row] = selectedNumber * 2
-        tableView.reloadData()   
+        // Cuando se selecciona una fila, se llama al método en el ViewModel para actualizar el modelo
+        viewModel.didSelectRow(at: indexPath.row)
+        
+        // Luego, recarga la tabla para reflejar los cambios
+        tableView.reloadData()
     }
     
     @IBAction func addButtonTapped(_ sender: Any) {
         // Agrega un nuevo número al array y recarga la tabla
-        let newNumber = numbers.count + 1
-        numbers.append(newNumber)
+        viewModel.addNumber()
         tableView.reloadData()
     }
-    
     
 }

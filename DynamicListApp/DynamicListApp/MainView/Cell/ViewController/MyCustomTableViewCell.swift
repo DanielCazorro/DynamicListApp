@@ -22,9 +22,7 @@ class MyCustomTableViewCell: UITableViewCell {
         numberLabel.numberOfLines = 0
         
         // Configuración del fondo de la celda
-        backgroundColor = .white
-        contentView.layer.borderWidth = 1
-        contentView.layer.borderColor = UIColor.black.cgColor
+        backgroundColor = .clear
         
     }
     
