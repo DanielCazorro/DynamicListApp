@@ -27,9 +27,14 @@ class MainViewController: UIViewController {
         tableView.register(UINib(nibName: "MyCustomTableViewCell", bundle: nil), forCellReuseIdentifier: "mycustomcell")
         
     }
+    
+    // MARK: -Functions
+    func set(viewModel: MainViewModel) {
+        self.viewModel = viewModel
+    }
 }
-// MARK: - Extensions -
 
+// MARK: - Extensions -
 // UITableViewDataSource
 extension MainViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
