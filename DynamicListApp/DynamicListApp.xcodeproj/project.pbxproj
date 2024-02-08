@@ -11,6 +11,7 @@
 		2C166B3D2B5700840083291D /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C166B3B2B5700840083291D /* MainViewController.xib */; };
 		2C589F842B5708B50072FE7C /* MyCustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C589F832B5708B50072FE7C /* MyCustomTableViewCell.xib */; };
 		2C589F862B5708BB0072FE7C /* MyCustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C589F852B5708BB0072FE7C /* MyCustomTableViewCell.swift */; };
+		2C5B8DDC2B74C22E0036FAFE /* MainViewWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5B8DDB2B74C22E0036FAFE /* MainViewWireframe.swift */; };
 		2C9994D62B56F7BF003099C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9994D52B56F7BF003099C5 /* AppDelegate.swift */; };
 		2C9994D82B56F7BF003099C5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9994D72B56F7BF003099C5 /* SceneDelegate.swift */; };
 		2C9994DF2B56F7C0003099C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C9994DE2B56F7C0003099C5 /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 		2C166B3B2B5700840083291D /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		2C589F832B5708B50072FE7C /* MyCustomTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyCustomTableViewCell.xib; sourceTree = "<group>"; };
 		2C589F852B5708BB0072FE7C /* MyCustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCustomTableViewCell.swift; sourceTree = "<group>"; };
+		2C5B8DDB2B74C22E0036FAFE /* MainViewWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewWireframe.swift; sourceTree = "<group>"; };
 		2C9994D22B56F7BF003099C5 /* DynamicListApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DynamicListApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C9994D52B56F7BF003099C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C9994D72B56F7BF003099C5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,52 +57,39 @@
 			isa = PBXGroup;
 			children = (
 				2C589F7C2B57070C0072FE7C /* Cell */,
-				2C166B402B5701130083291D /* View */,
-				2C166B412B57011A0083291D /* ViewController */,
-				2CB7BD3A2B63CE41002A2CBC /* ViewModel */,
+				2C166B3B2B5700840083291D /* MainViewController.xib */,
+				2C166B3A2B5700840083291D /* MainViewController.swift */,
+				2CB7BD3B2B63CE56002A2CBC /* MainViewModel.swift */,
+				2C5B8DDB2B74C22E0036FAFE /* MainViewWireframe.swift */,
 			);
 			path = MainView;
-			sourceTree = "<group>";
-		};
-		2C166B402B5701130083291D /* View */ = {
-			isa = PBXGroup;
-			children = (
-				2C166B3B2B5700840083291D /* MainViewController.xib */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		2C166B412B57011A0083291D /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				2C166B3A2B5700840083291D /* MainViewController.swift */,
-			);
-			path = ViewController;
 			sourceTree = "<group>";
 		};
 		2C589F7C2B57070C0072FE7C /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				2C589F812B5707650072FE7C /* View */,
-				2C589F822B57076A0072FE7C /* ViewController */,
+				2C589F832B5708B50072FE7C /* MyCustomTableViewCell.xib */,
+				2C589F852B5708BB0072FE7C /* MyCustomTableViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
 		};
-		2C589F812B5707650072FE7C /* View */ = {
+		2C5B8DD92B74C1820036FAFE /* App */ = {
 			isa = PBXGroup;
 			children = (
-				2C589F832B5708B50072FE7C /* MyCustomTableViewCell.xib */,
+				2C9994D52B56F7BF003099C5 /* AppDelegate.swift */,
+				2C9994D72B56F7BF003099C5 /* SceneDelegate.swift */,
 			);
-			path = View;
+			path = App;
 			sourceTree = "<group>";
 		};
-		2C589F822B57076A0072FE7C /* ViewController */ = {
+		2C5B8DDA2B74C1D20036FAFE /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				2C589F852B5708BB0072FE7C /* MyCustomTableViewCell.swift */,
+				2C166B3E2B5700F70083291D /* LaunchScreen */,
+				2C166B3F2B5701020083291D /* MainView */,
 			);
-			path = ViewController;
+			path = UI;
 			sourceTree = "<group>";
 		};
 		2C9994C92B56F7BF003099C5 = {
@@ -122,22 +111,12 @@
 		2C9994D42B56F7BF003099C5 /* DynamicListApp */ = {
 			isa = PBXGroup;
 			children = (
-				2C166B3F2B5701020083291D /* MainView */,
-				2C166B3E2B5700F70083291D /* LaunchScreen */,
-				2C9994D52B56F7BF003099C5 /* AppDelegate.swift */,
-				2C9994D72B56F7BF003099C5 /* SceneDelegate.swift */,
+				2C5B8DD92B74C1820036FAFE /* App */,
+				2C5B8DDA2B74C1D20036FAFE /* UI */,
 				2C9994DE2B56F7C0003099C5 /* Assets.xcassets */,
 				2C9994E32B56F7C0003099C5 /* Info.plist */,
 			);
 			path = DynamicListApp;
-			sourceTree = "<group>";
-		};
-		2CB7BD3A2B63CE41002A2CBC /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				2CB7BD3B2B63CE56002A2CBC /* MainViewModel.swift */,
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,6 +193,7 @@
 			files = (
 				2CB7BD3C2B63CE56002A2CBC /* MainViewModel.swift in Sources */,
 				2C166B3C2B5700840083291D /* MainViewController.swift in Sources */,
+				2C5B8DDC2B74C22E0036FAFE /* MainViewWireframe.swift in Sources */,
 				2C9994D62B56F7BF003099C5 /* AppDelegate.swift in Sources */,
 				2C589F862B5708BB0072FE7C /* MyCustomTableViewCell.swift in Sources */,
 				2C9994D82B56F7BF003099C5 /* SceneDelegate.swift in Sources */,
